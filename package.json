@@ -13,6 +13,10 @@
   "author": "Bloc Inc",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.1",
     "hapi": "~7.5.0",
     "path": "^0.4.9"
   },

@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <title>Bloc Chat Project</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
 </head>
-<body>
-    
+<body>  
     <ui-view></ui-view>
     
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <!-- Angular Material required libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
 
@@ -19,6 +29,8 @@
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/firebaseInit.js"></script>
+    <script src="/scripts/services/Rooms.js"></script>
+    <script src="/scripts/controllers/RoomsCtrl.js"></script>
 </body>
 </html>
 

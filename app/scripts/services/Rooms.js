@@ -2,10 +2,15 @@
   function Room($firebaseArray) {
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
-    console.log("in service: ");
-    console.log(rooms);
+    //console.log(rooms);
+      
+    var addNewRoom = function(name){
+        rooms.$add({name : name});
+    }
+    
     return {
-      all: rooms
+      all: rooms,
+      addRoom : addNewRoom
     };
   }
 

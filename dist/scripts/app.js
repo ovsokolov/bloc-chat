@@ -15,9 +15,9 @@
          
         $mdThemingProvider
             .theme('default')
-            .primaryPalette('lime')
-            .accentPalette('yellow')
-            .warnPalette('orange')
+            .primaryPalette('indigo')
+            .accentPalette('purple')
+            .warnPalette('red')
             .backgroundPalette('blue-grey');
      }
           

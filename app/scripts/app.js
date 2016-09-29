@@ -11,7 +11,12 @@
              url: '/',
              controller: 'RoomsCtrl as rooms',
              templateUrl: '/templates/home.html'
-         });
+         })
+        .state("home.messages", {
+            url: "/messages/:roomId?:roomName",
+            controller: 'ListMessagesCtrl as msgs',
+            templateUrl: "/templates/messages.html"
+        });
          
         $mdThemingProvider
             .theme('default')

@@ -13,18 +13,17 @@
                     Add Room
                  </md-button>
             </md-toolbar>
-            <md-content layout-padding>
-                    <div ng-repeat="room in rooms.allRooms">
-                        <div>
-                            <p>
-                                {{ room.name }}
-                            </p>
-                        </div>
+               <md-list>
+                  <md-list-item class="md-3-line" ng-repeat="room in rooms.allRooms">
+                    <div class="md-list-item-text">
+                      <p><a ui-sref="home.messages({roomId: room.$id, roomName: room.name})" layout="column">{{ room.name }}</a></p>
                     </div>
-            </md-content>
+                    <md-divider ng-if="!$last"></md-divider>
+                  </md-list-item>
+                </md-list>
         </md-sidenav>
-        <md-content layout="column">
-            <ui-view="messages"></ui-view>
+        <md-content layout="column" flex layout-fill>
+            <ui-view></ui-view>
         </md-content>
     </md-content>
 </section>

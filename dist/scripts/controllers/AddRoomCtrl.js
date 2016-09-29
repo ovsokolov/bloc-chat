@@ -8,8 +8,6 @@
               .title('Create new room')
               .textContent('Enter room name')
               .placeholder('room name')
-              //.ariaLabel('Dog name')
-              //.initialValue('Buddy')
               .targetEvent(ev)
               .ok('Create room')
               .cancel('Cancel');
@@ -18,7 +16,6 @@
               console.log("before add");
               roomService.addRoom(result);
             }, function() {
-              //$scope.status = 'You didn\'t name your dog.';
             });
           };
      }

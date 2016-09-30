@@ -1,0 +1,22 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+          Set a User Name
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content layout="column" layout-align="center center">
+      <p  style="margin:10px;"layout="column" layout-align="space-around  center">The name will appear when you send<br> message</p>
+      <div class="md-dialog-content">
+          <input ng-model="userName"/>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row" layout-align="center center">
+      <md-button class="md-primary md-raised"ng-click="saveUser()">
+        Set User Name
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

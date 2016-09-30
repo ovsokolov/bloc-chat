@@ -1,12 +1,12 @@
 
-<md-list>
-    <md-subheader class="md-no-sticky" layout="row" layout-align="center center"><h3>{{msgs.currentRoomName}}</h3></md-subheader>
+<md-list style="height : 600px">
+    <md-subheader layout="row" layout-align="center center"><h3>{{msgs.currentRoomName}}</h3></md-subheader>
     <md-list-item class="md-3-line" ng-repeat="message in msgs.roomMessages">
         <div class="md-list-item-text">
             <div layout="row" layout-align="space-between center">
-                <div layout="column" layout-align="center center">
-                    <div><b>{{ message.userName}}</b></div>
-                    <div><h4>{{ message.text}}</h4></div>
+                <div layout="column">
+                    <div layout="row"><b>{{ message.userName}}</b></div>
+                    <div layout="row"><h4>{{ message.text}}</h4></div>
                 </div>
                 <div>
                     <h4>{{ message.messageTime}}</h4>

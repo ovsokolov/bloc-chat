@@ -2,8 +2,8 @@
   function Room($firebaseArray) {
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
-    var messages;
     var currentRoomId;
+    var isSelected;
     //console.log(rooms);
       
     var addNewRoom = function(name){
@@ -28,6 +28,7 @@
     */
     var loadRoomMessages = function(roomId){
         currentRoomId = roomId;
+        isSelected = true;
         var msgRef = firebase.database().ref().child("messages");
         var query = msgRef.orderByChild('roomId').equalTo(roomId);
         var messages = $firebaseArray(query);
@@ -35,10 +36,20 @@
         
     }
     
+    var isRoomSelected = function(){
+        return isSelected;
+    }
+    
+    var getCurrentRoom = function(){
+        return currentRoomId;
+    }
+    
     return {
       all: rooms,
       addRoom : addNewRoom,
-      getMessages: loadRoomMessages
+      getMessages: loadRoomMessages,
+      isSelected: isRoomSelected,
+      currentRoom: getCurrentRoom
     };
   }
 

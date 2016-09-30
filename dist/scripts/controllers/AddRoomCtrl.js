@@ -8,7 +8,7 @@
               .title('Create new room')
               .textContent('Enter room name')
               .placeholder('room name')
-              //.targetEvent(ev)
+              .targetEvent(ev)
               .ok('Create room')
               .cancel('Cancel');
 
